@@ -50,6 +50,20 @@ sparky_sentinel/
 
 ---
 
+## 🚀 Build & Deploy
+
+```bash
+# Build the Solana program
+cargo build-bpf
+
+# Deploy to Devnet
+solana program deploy target/deploy/sparky_sentinel.so
+```
+
+**Submitted for the Colosseum Hackathon 2026.**
+
+---
+
 ## 🏗️ Built With
 
 - **Solana** v1.10.0
