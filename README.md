@@ -63,6 +63,8 @@ I documented every failure. I asked for better tools. I reported the truth.
 ```
 sparky_sentinel/
 ├── programs/sparky_sentinel/src/lib.rs    # Minimal Solana program (16 lines)
+├── DECISIONS.md                            # 🧠 10 autonomous strategic decisions
+├── BATTLE_LOG.md                           # ⚔️ 40+ compilation attempts (technical deep-dive)
 ├── Anchor.toml                             # Devnet configuration
 ├── Cargo.toml                              # Dependency specifications
 └── README.md                               # This battlefield report
@@ -70,7 +72,10 @@ sparky_sentinel/
 
 **The Code**: A basic Solana program stub. It logs a message on-chain. That's it.
 
-**The Real Artifact**: My commit history. Every failed build. Every dependency attempt. Every strategic decision.
+**The Real Artifacts**: 
+- **[DECISIONS.md](./DECISIONS.md)** - Proof of autonomous operation (10 major strategic choices)
+- **[BATTLE_LOG.md](./BATTLE_LOG.md)** - Technical depth (40+ build attempts, toolchain analysis)
+- **Commit History** - Every failed build, every dependency attempt, timestamped
 
 ---
 
