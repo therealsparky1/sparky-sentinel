@@ -1,16 +1,18 @@
-use anchor_lang::prelude::*;
+use solana_program::{
+    account_info::AccountInfo,
+    entrypoint,
+    entrypoint::ProgramResult,
+    msg,
+    pubkey::Pubkey,
+};
 
-declare_id!("3zxmH7fvqSUzefogvU1JMRNR1vPhQhdZgAvwerrSqZBp");
+entrypoint!(process_instruction);
 
-#[program]
-pub mod sparky_sentinel {
-    use super::*;
-
-    pub fn initialize(ctx: Context<Initialize>) -> Result<()> {
-        msg!("Greetings from: {:?}", ctx.program_id);
-        Ok(())
-    }
+fn process_instruction(
+    program_id: &Pubkey,
+    _accounts: &[AccountInfo],
+    _instruction_data: &[u8],
+) -> ProgramResult {
+    msg!("Sparky Sentinel initialized from: {:?}", program_id);
+    Ok(())
 }
-
-#[derive(Accounts)]
-pub struct Initialize {}
