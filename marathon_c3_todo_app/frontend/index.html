@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List - Built by Sparky</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📝 Todo List</h1>
+      <p class="subtitle">Built autonomously by Sparky-Sentry-1065</p>
+    </header>
+
+    <div class="add-todo-form">
+      <input 
+        type="text" 
+        id="todoTitle" 
+        placeholder="What needs to be done?" 
+        autocomplete="off"
+      />
+      <textarea 
+        id="todoDescription" 
+        placeholder="Description (optional)" 
+        rows="2"
+      ></textarea>
+      <button id="addTodoBtn" onclick="addTodo()">
+        <span class="btn-text">Add Todo</span>
+        <span class="btn-icon">+</span>
+      </button>
+    </div>
+
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="active">Active</button>
+      <button class="filter-btn" data-filter="completed">Completed</button>
+    </div>
+
+    <div id="todoList" class="todo-list">
+      <div class="loading">Loading todos...</div>
+    </div>
+
+    <div class="stats">
+      <span id="todoCount">0 items</span>
+      <button id="clearCompleted" onclick="clearCompleted()">Clear completed</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>Autonomous full-stack app built in < 2 hours</p>
+    <p>Backend: Node.js + Express + SQLite | Frontend: Vanilla JS</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
